@@ -1,0 +1,122 @@
+ 1 - for copy project form git hub 
+selected yout folder for copy project
+use this commend 
+git clone 'your repo url'
+
+
+2- for check state for the file
+git status
+
+3 - for add file to stage area 
+use 
+git add 'name of file' or * for all file
+
+4- for remove file form stage area 
+git reset head 'name of file'
+
+
+5 - make commit 
+git commit -m "descrtion"
+
+6 - for knowing branches 
+git branch
+
+7 - for knowing remot
+git remote -v
+
+8 - for push
+git push  remote  branch
+
+9 - for pull (this commend if any member from team add some edit you make this commend for pull this edit")
+git pull remote
+
+10 - configration
+git config -l
+for show all config
+add any commend .configration means some setting maybe you need it in future like color of commend when you make commit .
+
+11 - public key
+this commend for make key because i want to access at git hub but  i dont enter passward and email only add this public key
+ssh-keygen -t rsa -b 4096 -c "nacem009@gmail.com"
+
+## for test if key is successfully 
+ssh -T git@github.com
+
+12 - make repo from my laptop and push files at another repo
+a - git init for initiazion for git in new file i means if you make new file you need to convert this file to repo make git init 
+b - add any file or any project in this repo
+c - make new repo or add at old repo by this commend
+git remote add origin git@github.com:nacemelhasy/"here put name of repo you want to push file on it".git
+ for reomve remot git remote remove origin
+d - git push -u origin main 
+this commend for pull all file after that make all edit or push new files
+
+13 - for alias -- means make the long senteses is sort 
+git config --global alias.st status
+now for run git status write only git st
+hint if your commend have space put in singl quation 
+like git config --global alias.cm "commit -m"
+
+
+14 -  branches 
+A - for knowing : git branch
+B - for create branch : git branch newbranch
+C - for switched branch : git  checkout nameOfBranch
+D - for create branch and switched for it : git checkout -b newbranch
+E - for delete branch without check if it has any changes : git branch -D nameOfBranch
+F - for delte branch with check if all changes are marge with main branch if dont marg make error : git branch -d nameOfBranch
+G - for rename branch : in first must be indide branch then : git branch -m newName
+H - marg changed after make all edit on branch : go to main branch write : git merge nameOfBranch <- this is name of branch you edit some futue on it
+
+[ HINT ] : FOR PUSH CHANGE FROM BRANCH MAKE PUSH INSIDE NEW BRANCH 
+
+15 - stash using for save some file if you edit on it in future 
+git stash // for saving files
+git stash pop // for get files
+git stash save "any text" // for save the file and make text next the id stash
+git stash list // show all file in stash
+git stash apply // for pop file without remove form stash 
+git stash pop stash@{0} // pop spicific file
+git stash apply stash@{0} // pop without rem
+git stash show // show file in last stash id
+or
+git stash show stash@{0} // show file in  spicific file id
+git stash drop // for remove stash 
+or 
+git stash drop stash@{0} // for remove specific stash file 
+
+
+16 - restore and clean
+A - git restore --staged * or NameofFIle // for remove file from stage add
+B - git clean -n // for show files will be removed 
+C - git clean -f // for remove file was stage and i restore from stage 
+
+17 - remove commit 
+git log // for show all commit.  [HINT] : enter q for exit it
+git reset --head 'here put hash for commit == will remove all commit last this hash'
+then
+git push remote branch --force // force for check
+
+18 - Git ignore means ignore all file that found in file .gitignore
+First create file .gitignore then write like .log means any file end with .log git will ignore it
+or write name of folder like packges/ git will ignore it 
+or if you want to ignore specific file write it in file .gitignore like text.txt 
+[HINT] if you want to ignore all file end with .log but you need one file from them write not wit name of file like
+!pages.log
+
+[HINT] if you want add file found in .gitingonre file can do it by git add -f or --force name of file 
+
+
+19 - tags means make version from all version 
+A - if you want to make tag with commit that write at file 
+git tag v1.0
+then
+git push origin v1.0
+B - if want to make tag with specific commit 
+git tag -a v2.0 -m "any commit "
+
+20 - release means some note for descrip version
+you can delete tag and resealse from github directry
+also you can delete from cmd
+1 - git tag -d v1.0 // delete localy
+2 - git push origin --delete v1.0
