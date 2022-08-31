@@ -120,3 +120,13 @@ you can delete tag and resealse from github directry
 also you can delete from cmd
 1 - git tag -d v1.0 // delete localy
 2 - git push origin --delete v1.0
+
+
+
+
+
+
+
+[HINT] : If you want to push file at github and show some error 
+git pull --rebase origin main
+git push origin main
