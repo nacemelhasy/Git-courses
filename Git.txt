@@ -47,6 +47,8 @@ a - git init for initiazion for git in new file i means if you make new file you
 b - add any file or any project in this repo
 c - make new repo or add at old repo by this commend
 git remote add origin git@github.com:nacemelhasy/"here put name of repo you want to push file on it".git
+[HINT] : use above line if use key if use http 
+USE -> git remote add origin "url of repo"
  for reomve remot git remote remove origin
 d - git push -u origin main 
 this commend for pull all file after that make all edit or push new files
@@ -123,6 +125,7 @@ also you can delete from cmd
 
 
 
+21 - undo git init use this commend ->  rmdir /s .git
 
 
 
